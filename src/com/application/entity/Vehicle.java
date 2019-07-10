@@ -1,14 +1,13 @@
 package com.application.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     private int vechileId;
     private String vehicleName;
 
